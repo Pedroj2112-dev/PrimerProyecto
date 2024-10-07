@@ -1,0 +1,24 @@
+1. Definir los requisitos básicos
+Primero, pensemos en lo que el proyecto necesita:
+
+El usuario debe poder especificar la longitud de la contraseña.
+El usuario debe poder decidir si quiere incluir letras, números y/o caracteres especiales.
+El sistema debe generar una contraseña basada en esas preferencias.
+
+2. Plan de organización
+Para mantener el proyecto claro y fácil de mantener, puedes usar una combinación de funciones y clases. Si bien podrías hacer todo dentro de una sola clase, te recomiendo usar varias para separar responsabilidades. Aquí hay una posible estructura:
+
+a. Crear una clase para gestionar el generador de contraseñas
+Esta clase manejará la lógica de la generación de contraseñas. Podría llamarse PasswordGenerator y debería tener métodos que:
+
+Validan los parámetros que el usuario introduce (por ejemplo, longitud mínima).
+Generan la contraseña utilizando diferentes conjuntos de caracteres.
+b. Crear una clase para interactuar con el usuario
+Otra opción es crear una clase que gestione la interacción con el usuario o que encapsule la configuración, como:
+
+La longitud de la contraseña.
+Si se usan caracteres especiales, números, mayúsculas, minúsculas, etc.
+Esta clase podría llamarse PasswordConfig y contener métodos que validen las entradas del usuario.
+
+c. Funciones auxiliares (si es necesario)
+Para mantener el código modular, podrías tener funciones adicionales fuera de las clases que realicen tareas específicas, como la validación de entradas o la generación de combinaciones de caracteres.
